@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1f6b5c">
+<link rel="icon" href="logo.png">
+<title>Desi Dhani Restaurant – An Ethnic Village Restaurant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--teal:#1f6b5c;--teal-d:#164d42;--brass:#a8732f;--red:#c8372d;--bg:#fffdf7;--card:#ffffff;--ink:#2a2118;--mute:#6e6354;--line:#efe6d0;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--teal:#4fb39d;--teal-d:#0f2a25;--brass:#d9a35c;--red:#ef6a5e;--bg:#14201d;--card:#1b2c28;--ink:#f3ead6;--mute:#b3a78f;--line:#2e443e}}
+:root[data-theme="dark"]{--teal:#4fb39d;--teal-d:#0f2a25;--brass:#d9a35c;--red:#ef6a5e;--bg:#14201d;--card:#1b2c28;--ink:#f3ead6;--mute:#b3a78f;--line:#2e443e}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 112px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.5 Lato,system-ui,sans-serif}
+h1,h2,h3{font-family:'Yatra One',Georgia,serif;font-weight:400;margin:0}
+a{color:inherit}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px}
+.hero{background:var(--teal-d);background-image:radial-gradient(circle at 12px 12px,rgba(217,163,92,.35) 2px,transparent 2.5px);background-size:24px 24px;padding:28px 0 0}
+.arch{background:var(--bg);border-radius:48% 48% 0 0/22% 22% 0 0;padding:44px 20px 28px;text-align:center;margin-top:8px}
+.brand{font-size:clamp(40px,12vw,64px);color:var(--brass);line-height:1}
+.logo{display:block;margin:0 auto;width:min(80%,360px);height:auto}
+.sub{font-style:italic;letter-spacing:.06em;color:var(--mute);margin:8px 0 18px}
+.tag{font-family:'Yatra One',Georgia,serif;font-size:clamp(24px,7vw,36px);color:var(--red);margin:0 0 20px}
+.btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid var(--teal);min-height:44px}
+.btn.p{background:var(--teal);color:#fff}
+.btn.s{color:var(--teal)}
+.info{display:grid;gap:10px;padding:18px 16px 4px}
+.info div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.info b{display:block;color:var(--teal)}
+.bar{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line);padding:calc(env(safe-area-inset-top,0px) + 8px) 0 8px;margin-top:20px}
+.bar input{width:100%;padding:11px 14px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);font:inherit}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:8px 0 2px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;border:1px solid var(--line);background:var(--card);color:var(--ink);padding:7px 14px;border-radius:999px;font:inherit;cursor:pointer;min-height:36px}
+.chip.on{background:var(--teal);color:#fff;border-color:var(--teal)}
+section.cat{padding-top:22px}
+section.cat h2{color:var(--teal);font-size:28px;border-bottom:2px solid var(--brass);padding-bottom:4px;margin-bottom:6px}
+.it{display:flex;align-items:center;gap:10px;padding:11px 0;border-bottom:1px solid var(--line)}
+.it .n{flex:1}
+.it small{display:block;color:var(--mute);font-size:13px;line-height:1.35}
+.pr{font-weight:700;min-width:48px;text-align:right}
+.veg{width:12px;height:12px;border:1.5px solid #2e8b3d;display:inline-block;position:relative;margin-right:8px;vertical-align:-1px;flex:none}
+.veg::after{content:"";position:absolute;inset:2px;border-radius:50%;background:#2e8b3d}
+.add{border:1.5px solid var(--teal);color:var(--teal);background:transparent;border-radius:8px;padding:6px 14px;font:700 14px Lato,sans-serif;cursor:pointer;min-height:36px}
+.step{display:inline-flex;align-items:center;background:var(--teal);color:#fff;border-radius:8px}
+.step button{background:none;border:0;color:#fff;font:700 18px Lato,sans-serif;width:34px;height:36px;cursor:pointer}
+.step span{min-width:18px;text-align:center;font-weight:700}
+.empty{padding:28px 0;color:var(--mute);text-align:center}
+.more{margin:34px 0 0;padding:22px 16px;background:var(--teal-d);color:#f3ead6;border-radius:18px}
+.more h2{font-size:24px;color:#d9a35c;margin-bottom:8px}
+.more p{margin:6px 0}
+footer{padding:20px 0 120px;color:var(--mute);font-size:13px;text-align:center}
+.cart{position:fixed;left:12px;right:12px;bottom:calc(env(safe-area-inset-bottom,0px) + 12px);z-index:30;display:none;max-width:736px;margin:0 auto}
+.cart.show{display:block}
+.cart button{width:100%;display:flex;justify-content:space-between;align-items:center;background:var(--red);color:#fff;border:0;border-radius:14px;padding:14px 18px;font:700 16px Lato,sans-serif;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.sheet{position:fixed;inset:0;z-index:40;background:rgba(0,0,0,.5);display:none;align-items:flex-end}
+.sheet.show{display:flex}
+.panel{background:var(--bg);width:100%;max-width:760px;margin:0 auto;border-radius:20px 20px 0 0;max-height:85%;overflow:auto;padding:18px 16px calc(env(safe-area-inset-bottom,0px) + 16px)}
+.panel h2{color:var(--teal);font-size:24px;margin-bottom:8px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid var(--line)}
+.tot{display:flex;justify-content:space-between;font-weight:700;padding:12px 0 2px}
+.note{font-size:13px;color:var(--mute);margin:4px 0 12px}
+.panel input{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);font:inherit;margin-bottom:8px}
+.go{display:block;text-align:center;background:#1f9d55;color:#fff;font-weight:700;text-decoration:none;padding:13px;border-radius:12px;margin-top:8px}
+.x{background:none;border:0;color:var(--mute);font:inherit;margin-top:6px;cursor:pointer;padding:8px}
+:focus-visible{outline:3px solid var(--brass);outline-offset:2px}
+@media (min-width:600px){.info{grid-template-columns:repeat(3,1fr)}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap"><div class="arch">
+<h1 class="brand"><img class="logo" src="logo.png" alt="Desi Dhani Restaurant" width="360" onload="var s=document.querySelector('.sub');if(s)s.hidden=true" onerror="this.replaceWith(document.createTextNode('Desi Dhani'))"></h1>
+<p class="sub">An Ethnic Village Restaurant</p>
+<p class="tag">Always fresh and the best</p>
+<div class="btns"><a class="btn p" href="#menu">See the menu</a><a class="btn s" href="tel:+919610466668">Call 9610466668</a></div>
+</div></div></header>
+
+<main class="wrap">
+<div class="info">
+<div><b>Free home delivery</b>Within 4 km, minimum order ₹500</div>
+<div><b>Room service</b>For room dining call 9610466668</div>
+<div><b>Banquet hall &amp; marriage garden</b>Kitty, birthday, ring ceremony, corporate meetings, indoor and outdoor catering</div>
+</div>
+
+<div class="bar" id="menu"><input id="q" type="search" placeholder="Search dishes, e.g. paneer, dosa" aria-label="Search the menu"><div class="chips" id="chips"></div></div>
+<div id="list"></div>
+
+<div class="more">
+<h2>Plan your party with us</h2>
+<p>Kitty parties, birthdays, ring ceremonies, corporate meetings and weddings, with indoor and outdoor catering.</p>
+<p>Call <a href="tel:+919610466668">9610466668</a> or <a href="tel:+918107689104">8107689104</a>.</p>
+<p style="font-size:14px;opacity:.85">Each dish is freshly prepared, so please allow 10–15 minutes after ordering. Some items may not be available all the time.</p>
+</div>
+<footer>Prices in ₹. GST extra as applicable.</footer>
+</main>
+
+<div class="cart" id="cart"><button id="open"><span id="cc">0 items</span><span id="ct">View order</span></button></div>
+<div class="sheet" id="sheet"><div class="panel" role="dialog" aria-label="Your order">
+<h2>Your order</h2><div id="rows"></div>
+<div class="tot"><span>Total (before GST)</span><span id="tt"></span></div>
+<p class="note">GST is extra. We confirm availability and delivery on WhatsApp.</p>
+<input id="nm" placeholder="Your name" autocomplete="name">
+<input id="ad" placeholder="Table, room number or delivery address" autocomplete="street-address">
+<a class="go" id="wa" href="#" target="_blank" rel="noopener">Send order on WhatsApp</a>
+<button class="x" id="close">Keep browsing</button>
+</div></div>
+
+<script>
+// Category | items as "name|price|note" per line. price 0 = on MRP
+var M=[
+["Rajasthan Ro Swad",`Kadhai Pakora Jodhpuri|200
+Besan Gatta Jaipuri|240
+Lassan Ki Chatani|80
+Sev Tamatar Jaisalmeri|220
+Sev Bhaji Badmeri|220
+Makke Ki Roti (Seasonal)|50
+Bajre Ki Roti (Seasonal)|50
+Sarso Ka Saag (Seasonal)|280
+Dahi Fry|160
+Rajasthani Aloo Pyaaz|240
+Aloo Tamatar Desi Ghee|260
+Dal Khichdi Desi Ghee|240`],
+["Dal Bati Churma",`Dal Bati Churma, made in desi ghee|380|4 bati, churma and dal`],
+["Thali",`Special Thali|220|Dal fry, matar paneer, jeera rice, raita, 4 roti, 1 sweet, salad
+Rajasthani Thali|400|Dal fry, besan gatta, sev tamatar, churma + 2 bati, 1 missi, 2 butter roti, lahsan chatani, papad, butter milk
+Punjabi Thali|260|Dal makhani, chana masala, jeera rice, raita, 2 roti, 2 plain naan, papad, 1 sweet
+Desi Dhani Special Thali|350|Dal makhani, butter paneer, mix veg, jeera rice, salad, papad, 2 missi roti, 2 butter naan, 1 sweet`],
+["Breakfast",`Plain Toast (4 pcs)|80
+Butter Bread (4 pcs)|100
+Butter Toast (4 pcs)|100
+Veg Sandwich|130
+Grilled Sandwich|150
+Masala Aloo Grilled Sandwich|150
+Cheese Grilled Sandwich|180
+Veg Pakora Kachumar (8 pcs)|160
+Paneer Pakora (8 pcs)|170
+Veg Slice Pakora|160
+Puri Bhaji|120
+Maggi|100
+Veg Maggi|130
+Poha|120`],
+["Paratha",`Plain Paratha|50
+Aloo / Pyaaz Paratha|80
+Paneer Paratha|120
+Desi Dhani Special Paratha|130
+Gobhi / Muli Paratha (Seasonal)|120`],
+["Hot",`Hot Tea|30
+Black Tea|30
+Special Tea|40
+Hot Coffee|60
+Black Coffee|50
+Green Tea|50
+Milk|60
+Lemon Tea|50
+Punjabi Tea Glass|50`],
+["Cold",`Mineral Water|0
+Fresh Lime Soda|60
+Fresh Lime Water|50
+Masala Chach|70
+Lassi|120
+Cold Coffee|120
+Cold Drink (Glass)|30
+Cold Drink (500 ml)|60`],
+["South Indian",`Plain Dosa|140
+Butter Plain Dosa|150
+Masala Dosa|160
+Butter Masala Dosa|180
+Rawa Dosa|180
+Rawa Masala Dosa|200
+Rawa Paneer Dosa|220
+Paneer Dosa|200
+Veg Uthapam|180
+Mushroom Uthapam|220
+Onion / Tomato Uthapam|180
+Paneer Uthapam|220
+Idli Sambhar (2 pcs)|130
+Fried Idli|170
+Steam Idli Sambhar|150
+Cheese Paneer Masala Dosa|240
+Chilly Paneer Masala Dosa|260
+Mushroom Masala Dosa|260`],
+["Chinese",`Veg Singapuri Chowmein|160
+Veg Chowmein|130
+Veg Paneer Chowmein|160
+Veg Chilly Garlic Noodle|160
+Veg Hakka Noodle|160
+Veg Manchurian (Gravy / Dry)|190
+Chilly Manchurian (Gravy / Dry)|200
+Paneer Manchurian (Gravy / Dry)|210
+Gobhi Manchurian (Gravy / Dry)|180
+Chilly Paneer|240
+Chilly Potato|170
+Honey Chilly Potato|180
+Chilly Mushroom|250
+Chilly Gobhi|230
+Mushroom Pepper Fry|260`],
+["Dahi Kund Se",`Plain Curd|100
+Bundi Raita|110
+Veg Raita|110
+Aloo Raita|110`],
+["Starters",`Fresh Paneer (10 pcs)|250
+Fried Kaju|300
+Aloo Chaat|160
+Aloo Chana Chaat|170
+Peanut Masala|170
+Roasted Papad|40
+Masala Papad|60
+Hara Bhara Kabab|220
+Finger Chips|150`],
+["Soups",`Veg Clear Soup|100
+Creamy Tomato Soup|100
+Veg Sweet Corn Soup|120
+Veg Hot ’N’ Sour Soup|120
+Manchow Soup|120`],
+["Chatpata Chaat",`Pav Bhaji|100
+Paneer Pav Bhaaji|120
+Extra Pav (2 pcs)|40
+Extra Bhaji|50
+Chole Bhature|150
+Extra Bhatura (1 pc)|40
+Extra Chole|50
+Veg Burger|60`],
+["Paneer Dish",`Paneer Butter Masala|250
+Shahi Paneer|250
+Paneer Lababdar|260
+Paneer Taka Tak|280
+Chatpata Hariyali Paneer|250
+Kadhai Paneer|250
+Matar Paneer|230
+Palak Paneer|250
+Paneer Tikka Masala|250
+Paneer Do Pyaza|250
+Handi Paneer|260
+Paneer Bhujiya|300
+Khoya Paneer|300
+Aloo Pyaza Paneer|260`],
+["Dal",`Dal Fry|150
+Dal Tadka Rajasthani|200|Urad and chana
+Yellow Dal Tadka|200|Arhar dal
+Chana Masala|200
+Dal Makhani Punjab Se|240`],
+["Indian Curries",`Malai Kofta|260
+Veg Kofta|210
+Matar Methi Malai|240
+Paneer Methi Malai|260
+Dum Aloo Kashmiri|230
+Dum Aloo Amritsari|230
+Mix Veg|220
+Mushroom Masala|260
+Matar Mushroom|260
+Kadhai Mushroom|250
+Kaju Curry|320
+Aloo Jeera|160
+Aloo Matar / Tamatar|170
+Aloo Gobhi|180
+Gobhi Fry|200
+Soyabean Chaap|240`],
+["Salad",`Fresh Green Salad|80
+Onion Salad|50
+Kachumar Salad|70`],
+["Breads & Roti",`Plain Tawa Roti|15
+Plain Tandoori Roti|18
+Butter Tawa Roti|20
+Butter Tandoori Roti|20
+Plain Naan|40
+Butter Naan|50
+Paneer Naan|70
+Onion Naan|60
+Garlic Naan|70
+Stuff Naan|80
+Missi Roti|40
+Onion Missi Roti|50
+Laccha Paratha|60`],
+["Rice",`Steam Rice|130
+Jeera Rice|160
+Matar Pulav|170
+Veg Biryani|200
+Veg Fried Rice|200
+Veg Pulav|190
+Mushroom Biryani|240
+Chilly Garlic Rice|220
+Curd Rice|220`],
+["Kuch Meetha Ho Jaye",`Gulab Jamun (2 pcs)|60
+Sponge Rasgulla (2 pcs)|80
+Rajasthani Gajrela (Seasonal, 100 gm)|100`]
+];
+var items=[],cart={},cat="All",term="";
+M.forEach(function(c,ci){c[1].split("\n").forEach(function(l,ii){var p=l.split("|");items.push({id:ci+"_"+ii,c:ci,n:p[0],p:+p[1],d:p[2]||""})})});
+var $=function(i){return document.getElementById(i)};
+function esc(s){return s.replace(/[&<>"]/g,function(m){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]})}
+function chips(){var h='<button class="chip'+(cat=="All"?' on':'')+'" data-c="All">All</button>';
+M.forEach(function(c,i){h+='<button class="chip'+(cat==i?' on':'')+'" data-c="'+i+'">'+esc(c[0])+'</button>'});$("chips").innerHTML=h}
+function ctl(it){var q=cart[it.id]||0;if(it.p==0)return'<span class="pr">On MRP</span>';
+return'<span class="pr">₹'+it.p+'</span>'+(q?'<span class="step"><button data-m="'+it.id+'" aria-label="Remove one">−</button><span>'+q+'</span><button data-a="'+it.id+'" aria-label="Add one">+</button></span>':'<button class="add" data-a="'+it.id+'">Add</button>')}
+function list(){var h="",n=0;M.forEach(function(c,ci){if(cat!="All"&&cat!=ci)return;
+var r=items.filter(function(x){return x.c==ci&&(!term||(x.n+" "+x.d+" "+c[0]).toLowerCase().indexOf(term)>-1)});if(!r.length)return;n+=r.length;
+h+='<section class="cat" id="c'+ci+'"><h2>'+esc(c[0])+'</h2>';
+r.forEach(function(x){h+='<div class="it"><span class="veg" title="Vegetarian"></span><div class="n">'+esc(x.n)+(x.d?'<small>'+esc(x.d)+'</small>':'')+'</div>'+ctl(x)+'</div>'});h+='</section>'});
+$("list").innerHTML=n?h:'<p class="empty">No dishes match “'+esc(term)+'”. Try a shorter word.</p>'}
+function totals(){var c=0,t=0;items.forEach(function(x){var q=cart[x.id]||0;c+=q;t+=q*x.p});return[c,t]}
+function bar(){var r=totals();$("cart").className="cart"+(r[0]?" show":"");$("cc").textContent=r[0]+(r[0]==1?" item":" items")+" · ₹"+r[1];}
+function sheet(){var h="",r=totals();items.forEach(function(x){var q=cart[x.id];if(!q)return;
+h+='<div class="row"><span>'+esc(x.n)+'</span><span class="step"><button data-m="'+x.id+'" aria-label="Remove one">−</button><span>'+q+'</span><button data-a="'+x.id+'" aria-label="Add one">+</button></span><b>₹'+q*x.p+'</b></div>'});
+$("rows").innerHTML=h;$("tt").textContent="₹"+r[1];wa()}
+function wa(){var t="Hello Desi Dhani, I would like to order:\n",r=totals();items.forEach(function(x){var q=cart[x.id];if(q)t+=q+" x "+x.n+" - ₹"+q*x.p+"\n"});
+t+="Total (before GST): ₹"+r[1];if($("nm").value)t+="\nName: "+$("nm").value;if($("ad").value)t+="\nTable / address: "+$("ad").value;
+$("wa").href="https://wa.me/919610466668?text="+encodeURIComponent(t)}
+function chg(id,d){cart[id]=Math.max(0,(cart[id]||0)+d);if(!cart[id])delete cart[id];list();bar();if($("sheet").className.indexOf("show")>-1){sheet();if(!totals()[0])$("sheet").className="sheet"}}
+document.addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;
+if(b.dataset.a)chg(b.dataset.a,1);else if(b.dataset.m)chg(b.dataset.m,-1);
+else if(b.dataset.c!==undefined){cat=b.dataset.c=="All"?"All":+b.dataset.c;chips();list();window.scrollTo({top:$("menu").offsetTop-4})}
+else if(b.id=="open"){sheet();$("sheet").className="sheet show"}
+else if(b.id=="close")$("sheet").className="sheet"});
+$("sheet").addEventListener("click",function(e){if(e.target==this)this.className="sheet"});
+$("q").addEventListener("input",function(){term=this.value.trim().toLowerCase();list()});
+$("nm").addEventListener("input",wa);$("ad").addEventListener("input",wa);
+chips();list();
+</script>
+</body>
+</html>
